@@ -116,3 +116,13 @@ problem is solved by this code?" On the other hand, if a test does fail and you 
 better way to solve the same problem, a Pull Request with your solution would most certainly be
 welcome! Likewise, if rewriting a test can better communicate what code it's protecting, please
 send us that patch!
+
+## Python stub generation
+
+This repository includes a helper script to generate Python package stubs for each Rust crate in the workspace. To run it:
+
+```bash
+$ python3 scripts/generate_python_stubs.py
+```
+
+The generated stubs appear in the `python_stubs/` directory and provide placeholder packages mirroring the workspace structure.
