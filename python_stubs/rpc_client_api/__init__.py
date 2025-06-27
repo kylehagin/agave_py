@@ -1,4 +1,20 @@
-"""Python stub for crate `rpc-client-api`."""
+"""Simplified types for the `rpc-client-api` crate."""
 
-class Placeholder:
+from dataclasses import dataclass
+from typing import Any
+
+
+class ErrorKind(Exception):
     pass
+
+
+@dataclass
+class Error(Exception):
+    kind: ErrorKind
+    message: str = ""
+
+
+@dataclass
+class Response:
+    value: Any
+    context: dict | None = None
