@@ -1,4 +1,15 @@
-"""Python stub for crate `transaction-status-client-types`."""
+"""Types shared by transaction status RPC clients."""
 
-class Placeholder:
-    pass
+from __future__ import annotations
+
+from enum import Enum, auto
+
+
+class UiTransactionEncoding(Enum):
+    BASE64 = auto()
+    BASE58 = auto()
+    JSON = auto()
+
+
+__all__ = ["UiTransactionEncoding"]
+
