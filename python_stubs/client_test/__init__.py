@@ -1,4 +1,6 @@
-"""Python stub for crate `client-test`."""
+"""Test utilities mirroring the `client-test` crate."""
 
-class Placeholder:
-    pass
+
+def run_tests() -> None:
+    """Execute the client test suite."""
+
