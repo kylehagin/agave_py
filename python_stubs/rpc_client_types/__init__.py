@@ -1,4 +1,16 @@
-"""Python stub for crate `rpc-client-types`."""
+"""Common types for RPC client requests and responses."""
 
-class Placeholder:
-    pass
+from dataclasses import dataclass
+from typing import Any
+
+
+@dataclass
+class RpcRequest:
+    method: str
+    params: Any
+
+
+@dataclass
+class RpcResponse:
+    result: Any
+    error: Any | None = None
