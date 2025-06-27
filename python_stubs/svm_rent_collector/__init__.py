@@ -1,4 +1,15 @@
-"""Python stub for crate `svm-rent-collector`."""
+"""Collect rent from accounts over time."""
 
-class Placeholder:
-    pass
+from dataclasses import dataclass
+
+
+@dataclass
+class RentCollector:
+    lamports_per_slot: int
+
+    def collect(self, balance: int, slots: int) -> int:
+        rent = self.lamports_per_slot * slots
+        return max(balance - rent, 0)
+
+
+__all__ = ["RentCollector"]
