@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from typing import List
 
-from agave_geyser_plugin_interface.geyser_plugin_interface import GeyserPlugin
+from geyser_plugin_interface import GeyserPlugin
 
 
 @dataclass
