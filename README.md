@@ -126,3 +126,12 @@ $ python3 scripts/generate_python_stubs.py
 ```
 
 The generated stubs appear in the `python_stubs/` directory and provide placeholder packages mirroring the workspace structure.
+
+
+## Python stub setup
+
+Install the small set of Python dependencies required by the stubs (currently just `base58`):
+
+```bash
+pip install -r requirements.txt
+```
