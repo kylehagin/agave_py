@@ -126,3 +126,12 @@ $ python3 scripts/generate_python_stubs.py
 ```
 
 The generated stubs appear in the `python_stubs/` directory and provide placeholder packages mirroring the workspace structure.
+
+## Python tests
+
+Unit tests covering the stub modules live in `tests/` and are executed with `pytest`.
+Run them with:
+
+```bash
+$ pytest
+```
